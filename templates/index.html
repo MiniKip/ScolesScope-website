@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <title>SOLESCAPE | We are speed!</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='styles.css') }}"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Top Bar -->
+        <div class="top-bar">Free shipping on all orders over $100</div>
+
+        <!-- navigation area -->
+        <header>
+            <div class="header-content">
+                <h1 class="logo">SOLESCAPE</h1>
+                <nav>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Collections</a>
+                    <a href="#">Sale</a>
+                    <a href="#" id="cart-link" class="cart-btn">
+                        <span>Bag</span>
+                        <span id="cart-badge">0</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Naiki Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h2>The Future of Comfort</h2>
+                <p>Experience the lightness of Naiki footwear.</p>
+                <a href="#shop" class="hero-btn">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- the product sections -->
+        <main class="container" id="shop">
+            <div class="section-header">
+                <h2 class="title">Featured Products</h2>
+                <div class="filters">
+                    <span>Filter By: Size, Color, Price</span>
+                </div>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600"
+                            alt="P1"
+                        />
+                        <div class="quick-view">Quick Add +</div>
+                    </div>
+                    <div class="details">
+                        <span class="category">Running</span>
+                        <h3>P1 - Aero Glide</h3>
+                        <p class="price">$40.00</p>
+                        <button class="buy-btn" onclick="addToCart('P1', 40)">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600"
+                            alt="P2"
+                        />
+                        <div class="quick-view">Quick Add +</div>
+                    </div>
+                    <div class="details">
+                        <span class="category">Lifestyle</span>
+                        <h3>P2 - Street Classic</h3>
+                        <p class="price">$60.00</p>
+                        <button class="buy-btn" onclick="addToCart('P2', 60)">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="img-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600"
+                            alt="P3"
+                        />
+                        <div class="quick-view">Quick Add +</div>
+                    </div>
+                    <div class="details">
+                        <span class="category">Basketball</span>
+                        <h3>P3 - Court Pro</h3>
+                        <p class="price">$70.00</p>
+                        <button class="buy-btn" onclick="addToCart('P3', 70)">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- The main footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Help</h4>
+                    <p>Shipping</p>
+                    <p>Returns</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <p>Our Story</p>
+                    <p>Sustainability</p>
+                </div>
+                <div class="footer-section newsletter">
+                    <h4>Join the Club</h4>
+                    <input type="text" placeholder="Email Address" />
+                    <button>Join</button>
+                </div>
+            </div>
+        </footer>
+
+        <div id="msg">Item added to bag!</div>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+</html>
